@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NullSynced | Roblox Scripter</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="Images/Echidna.ico"/>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAV BAR -->
+    <nav class="Navbar">
+        <span class="NavLogo">NullSynced</span>
+        <ul class="NavLinks">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="HeroSection" id="home">
+        <div class="HeroGrid"></div>
+        <div class="HeroContent">
+            <p class="HeroSub">Hello, I'm</p>
+            <h1 class="HeroName">NullSynced</h1>
+            <h2 class="HeroTitle">Roblox <span class="Accent">Scripter</span></h2>
+            <p class="HeroDesc">I script and build systems in Roblox Studio. From backend logic to gameplay systems.</p>
+            <div class="HeroBtns">
+                <a href="#projects" class="BtnPrimary">View My Work</a>
+                <a href="#contact" class="BtnSecondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="HeroCode">
+            
+<pre><code><span class="c-keyword">export type</span> Developer = {
+    name: <span class="c-keyword">string</span>,
+    nickname: <span class="c-keyword">string</span>?,
+    timezone: <span class="c-keyword">string</span>,
+    payment_methods: {<span class="c-keyword">string</span>},
+    role: <span class="c-keyword">string</span>,
+    engine: <span class="c-keyword">string</span>,
+    languages: {<span class="c-keyword">string</span>},
+    status: <span class="c-keyword">string</span>
+}
+
+<span class="c-keyword">local</span> DeveloperProfile: <span class="c-keyword">Developer</span> = {
+    name = <span class="c-string">"NullSynced"</span>,
+    nickname = <span class="c-string">"softimpact"</span>,
+    timezone = <span class="c-string">"UTC+2"</span>,
+    payment_methods = {
+        <span class="c-string">"Robux"</span>
+    },
+    role = <span class="c-string">"Scripter"</span>,
+    engine = <span class="c-string">"Roblox_Studio"</span>,
+    languages = {
+        <span class="c-string">"Luau"</span>,
+        <span class="c-string">"Python"</span>
+    },
+    status = <span class="c-string">"Open_for_commissions"</span>
+}
+
+<span class="c-keyword">return</span> DeveloperProfile</code></pre>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="Section" id="about">
+        <div class="SectionInner">
+            <h2 class="SectionTitle">About <span class="Accent">Me</span></h2>
+            <div class="AboutGrid">
+                <div class="AboutText">
+                    <p>I'm a passionate Roblox Studio developer who specializes in writing clean, efficient Luau scripts and building game systems from the ground up.</p>
+                    <p>Whatever system it is, I focus on making things that actually work well and are easy to maintain.</p>
+                    <p>I care a lot about code quality and building systems that can scale as a game grows.</p>
+                    <p>If you asked me to rank myself on how good I am, I would say I am definitely intermediate, potentially even higher-intermediate.</p>
+                    <p>On the right, you'll see my stats. Isn't as high as you expected? Fair, so let's grow it together! So far, I have...</p>
+                </div>
+                <div class="AboutStats">
+                    <div class="StatCard">
+                        <span class="StatNum">2</span>
+                        <span class="StatLabel">Projects Built</span>
+                    </div>
+                    <div class="StatCard">
+                        <span class="StatNum">1</span>
+                        <span class="StatLabel">Projects I've helped on</span>
+                    </div>
+                    <div class="StatCard">
+                        <span class="StatNum">~2</span>
+                        <span class="StatLabel">Years Experience</span>
+                    </div>
+                    <div class="StatCard">
+                        <span class="StatNum">1K+</span>
+                        <span class="StatLabel">Bugs Squashed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="Section SectionDark" id="projects">
+        <div class="SectionInner">
+            <h2 class="SectionTitle">My <span class="Accent">Projects</span></h2>
+            <p class="SectionSub">A few things I've built.</p>
+            <div class="ProjectsGrid">
+
+                <div class="ProjectCard">
+                    <div class="ProjectTag">Input</div>
+                    <h3 class="ProjectName">Input Controller</h3>
+                    <p class="ProjectDesc">An extremely simple to use wrapper for UserInputService that features filtered Input signals, binding actions, unbinding actions, combos and so much more.</p>
+                    <div class="ProjectTech">
+                        <span>Luau</span><span>UserInputService</span><span>Wrapper</span>
+                    </div>
+                </div>
+
+                <div class="ProjectCard">
+                    <div class="ProjectTag">UI</div>
+                    <h3 class="ProjectName">Admin Panel</h3>
+                    <p class="ProjectDesc">A custom in-game admin dashboard for whitelisted users using Iris ImGui.</p>
+                    <div class="ProjectTech">
+                        <span>Luau</span>
+                    </div>
+                </div>
+
+                <div class="ProjectCard">
+                    <div class="ProjectTag">Game</div>
+                    <h3 class="ProjectName">Active Incremental Game</h3>
+                    <p class="ProjectDesc">I have an incremental game that I am actively working on. It features systems like saving, quests & dialogues, Player data handling and so much more!</p>
+                    <div class="ProjectTech">
+                        <span>Luau</span><span>Studio</span><span>Incremental</span><span>Active Project</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="Section" id="skills">
+        <div class="SectionInner">
+            <h2 class="SectionTitle">My <span class="Accent">Skills</span></h2>
+            <div class="SkillsGrid">
+
+                <div class="SkillGroup">
+                    <h3 class="SkillGroupTitle">Languages</h3>
+                    <div class="SkillList">
+                        <div class="SkillItem"><span class="SkillDot"></span>Luau</div>
+                        <div class="SkillItem"><span class="SkillDot"></span>Basic Python</div>
+                    </div>
+                </div>
+
+                <div class="SkillGroup">
+                    <h3 class="SkillGroupTitle">Roblox APIs</h3>
+                    <div class="SkillList">
+                        <div class="SkillItem"><span class="SkillDot"></span>Data Persistence Systems</div>
+                        <div class="SkillItem"><span class="SkillDot"></span>RemoteEvents & Functions</div>
+                        <div class="SkillItem"><span class="SkillDot"></span>TweenService</div>
+                        <div class="SkillItem"><span class="SkillDot"></span>RunService</div>
+                    </div>
+                </div>
+
+                <div class="SkillGroup">
+                    <h3 class="SkillGroupTitle">Systems</h3>
+                    <div class="SkillList">
+                        <div class="SkillItem"><span class="SkillDot"></span>Gameplay system Architecture</div>
+                        <div class="SkillItem"><span class="SkillDot"></span>Client-Server Architecture</div>
+                        <div class="SkillItem"><span class="SkillDot"></span>Modular Scripting</div>
+                        <div class="SkillItem"><span class="SkillDot"></span>Object-Oriented-Programming in Luau</div>
+                    </div>
+                </div>
+
+                <div class="SkillGroup">
+                    <h3 class="SkillGroupTitle">Tools</h3>
+                    <div class="SkillList">
+                        <div class="SkillItem"><span class="SkillDot"></span>Roblox Studio</div>
+                        <div class="SkillItem"><span class="SkillDot"></span>VS Code</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="Section SectionDark" id="contact">
+        <div class="SectionInner ContactInner">
+            <h2 class="SectionTitle">Get In <span class="Accent">Touch</span></h2>
+            <p class="SectionSub">Looking to hire, collaborate, chat, or just more of my stuff? Hit me up1</p>
+            <div class="ContactLinks">
+                <a class="ContactCard">
+                    <span class="ContactIcon">💬</span>
+                    <span class="ContactPlatform">Discord</span>
+                    <span class="ContactHandle">@softimpact</span>
+                </a>
+                <a href="https://www.roblox.com/users/8551060448/profile" class="ContactCard">
+                    <span class="ContactIcon">🎮</span>
+                    <span class="ContactPlatform">Roblox</span>
+                    <span class="ContactHandle">NullSynced</span>
+                </a>
+                <a href="https://github.com/rowdy176" class="ContactCard">
+                    <span class="ContactIcon">👾</span>
+                    <span class="ContactPlatform">GitHub</span>
+                    <span class="ContactHandle">rowdy176</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="Footer">
+        <p>Built by <span class="Accent">NullSynced</span>  *  Roblox Scripter & Systems Developer</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

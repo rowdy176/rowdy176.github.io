@@ -1,0 +1,504 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg:        #0d0d0d;
+    --bg-dark:   #080808;
+    --surface:   #161616;
+    --border:    #222222;
+    --accent:    #d468ff;
+    --accent2:   #7c3aed;
+    --text:      #e8e8e8;
+    --text-muted:#888888;
+    --font-mono: 'Share Tech Mono', monospace;
+    --font-main: 'Rajdhani', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-main);
+    font-size: 18px;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.Navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 60px;
+    background: rgba(8, 8, 8, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+}
+
+.NavLogo {
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    color: var(--accent);
+    letter-spacing: 2px;
+}
+
+.NavLinks {
+    list-style: none;
+    display: flex;
+    gap: 36px;
+}
+
+.NavLinks a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    transition: color 0.2s;
+}
+
+.NavLinks a:hover {
+    color: var(--accent);
+}
+
+.HeroSection {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px 60px 80px;
+    overflow: hidden;
+    gap: 40px;
+}
+
+.HeroGrid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+.HeroSection::before {
+    content: '';
+    position: absolute;
+    left: 17.5%;
+    width: 1000px;
+    height: 1000px;
+    background: radial-gradient(circle, rgba(170, 0, 255, 0.07) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.HeroContent {
+    position: relative;
+    max-width: 580px;
+    animation: fadeUp 0.8s ease both;
+}
+
+.HeroSub {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.HeroName {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+}
+
+.HeroTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.HeroDesc {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 480px;
+    margin-bottom: 36px;
+}
+
+.HeroBtns {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.BtnPrimary {
+    padding: 14px 32px;
+    background: var(--accent);
+    color: #000;
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.BtnPrimary:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+.BtnSecondary {
+    padding: 14px 32px;
+    background: transparent;
+    color: var(--accent);
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border: 1px solid var(--accent);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.BtnSecondary:hover {
+    background: var(--accent);
+    color: #000;
+    transform: translateY(-2px);
+}
+
+.HeroCode {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--accent);
+    padding: 28px 32px;
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    min-width: 300px;
+    animation: fadeUp 0.8s 0.2s ease both;
+}
+
+.HeroCode::before {
+    content: '● ● ●';
+    position: absolute;
+    top: 10px;
+    left: 16px;
+    font-size: 0.7rem;
+    color: var(--border);
+    letter-spacing: 4px;
+}
+
+.c-keyword { color: #c792ea; }
+.c-string   { color: #c3e88d; }
+
+.Section {
+    padding: 100px 60px;
+}
+
+.SectionDark {
+    background-color: var(--bg-dark);
+}
+
+.SectionInner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.SectionTitle {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.SectionSub {
+    color: var(--text-muted);
+    margin-bottom: 56px;
+    font-size: 1rem;
+}
+
+.Accent {
+    color: var(--accent);
+}
+
+.AboutGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+    margin-top: 48px;
+}
+
+.AboutText p {
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    font-size: 1.05rem;
+}
+
+.AboutStats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.StatCard {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.StatNum {
+    font-family: var(--font-mono);
+    font-size: 2rem;
+    color: var(--accent);
+}
+
+.StatLabel {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.ProjectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.ProjectCard {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 32px 28px;
+    transition: border-color 0.25s, transform 0.25s;
+    position: relative;
+    overflow: hidden;
+}
+
+.ProjectCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.ProjectCard:hover::before {
+    width: 100%;
+}
+
+.ProjectCard:hover {
+    border-color: #333;
+    transform: translateY(-4px);
+}
+
+.ProjectTag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 3px 10px;
+    margin-bottom: 16px;
+}
+
+.ProjectName {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.ProjectDesc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.ProjectTech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.ProjectTech span {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    background: rgba(255,255,255,0.05);
+    padding: 3px 10px;
+    border-radius: 2px;
+}
+
+.SkillsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 40px;
+    margin-top: 48px;
+}
+
+.SkillGroupTitle {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+}
+
+.SkillItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.SkillDot {
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.ContactInner {
+    text-align: center;
+}
+
+.ContactLinks {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 48px;
+}
+
+.ContactCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 28px 36px;
+    min-width: 160px;
+    transition: border-color 0.2s, transform 0.2s;
+    cursor: pointer;
+}
+
+.ContactCard:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+}
+
+.ContactIcon {
+    font-size: 1.8rem;
+}
+
+.ContactPlatform {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.ContactHandle {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.Footer {
+    background: var(--bg-dark);
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 24px;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.NavLinks a.active {
+    color: var(--accent);
+}
+
+@media (max-width: 900px) {
+    .HeroSection {
+        flex-direction: column;
+        padding: 120px 30px 60px;
+        text-align: center;
+    }
+    .HeroName { font-size: 3.5rem; }
+    .HeroBtns { justify-content: center; }
+    .HeroCode { min-width: unset; width: 100%; }
+    .AboutGrid { grid-template-columns: 1fr; }
+    .Navbar { padding: 16px 24px; }
+    .NavLinks { gap: 20px; }
+    .Section { padding: 70px 30px; }
+}
+
+@media (max-width: 600px) {
+    .HeroName { font-size: 2.8rem; }
+    .NavLinks { display: none; }
+    .ContactLinks { flex-direction: column; align-items: center; }
+}
