@@ -45,7 +45,7 @@ const PROJECTS = [
         shortDesc: "I have an incremental game that I am actively working on. It features systems like saving, quests & dialogues, Player data handling and so much more!",
         tech:      ["Luau", "Studio", "Incremental", "Active Project"],
 
-        longDesc:  "An incremental game built entirely from scratch in Roblox Studio. This is my main long-term project for now.\n\n In the images linked under, please do not judge my building skills, I know I am horrible at scripting :)",
+        longDesc:  "An incremental game built entirely from scratch in Roblox Studio. This is my main long-term project for now.\n\n In the images linked under, please do not judge my building skills, I know I am horrible at building :)",
         features: [
             "Full save/load system that easily saves Inventory items and Quests",
             "Quest & dialogue system with branching conversations",
