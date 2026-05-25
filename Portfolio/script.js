@@ -1,6 +1,6 @@
 // title and shortdesc are necessary
 // incase I forget, images can be paths or URLS
-// videos must be youtube video embeds and all that
+// yt videos now have to be in Videos/ folder urgh so annoying
 // links need to be in this format {label: "hi lol", url: "goofyurl"}
 // links can be anything tbh
 const PROJECTS = [
@@ -14,11 +14,11 @@ const PROJECTS = [
             "Filtered input signals, automatically are checked for no gameProcessed",
             "Bind and unbind actions easily",
             "Combo detection (e.g. press E then F within 1s)",
-            "More utility functons like IsKeyDown, GetHeldDuration, GetCurrentDevice, GetMousePos",
+            "More utility functions like IsKeyDown, GetHeldDuration, GetCurrentDevice, GetMousePos",
             "And many more. Read my actual documentation for more info"
         ],
         images: [],
-        videos: [],
+        videos: ["Videos/InputControllerDEMO.mp4"],
         link: {
             label: "View on GitHub",
             url: "https://github.com/rowdy176/InputController"
@@ -29,7 +29,7 @@ const PROJECTS = [
         title:     "Admin Panel",
         shortDesc: "A custom in-game admin dashboard for whitelisted users using Iris ImGui.",
         tech:      ["Luau"],
-        longDesc:  "An in-game admin panel using Iris ImGui. Only whitelisted user IDs can open it. However, this project is rather old, discontinued and won't be shown publicly. I don't even know why added this here in the first place.",
+        longDesc:  "An in-game admin panel using Iris ImGui. Only whitelisted user IDs can open it. However, this project is rather old, discontinued and won't be shown publicly. I don't even know why I added this here in the first place.",
         features: [
             "Whitelist system, only specific user IDs can get it and use it",
             "Built with Iris ImGui for a clean developer-tool look",
@@ -44,8 +44,7 @@ const PROJECTS = [
         title:     "Active Incremental Game",
         shortDesc: "I have an incremental game that I am actively working on. It features systems like saving, quests & dialogues, Player data handling and so much more!",
         tech:      ["Luau", "Studio", "Incremental", "Active Project"],
-
-        longDesc:  "An incremental game built entirely from scratch in Roblox Studio. This is my main long-term project for now.\n\n In the images linked under, please do not judge my building skills, I know I am horrible at building :)",
+        longDesc:  "An incremental game built entirely from scratch in Roblox Studio. This is my main long-term project for now. \n\n In the images linked under, please do not judge my building skills, I know I am horrible at building :)",
         features: [
             "Full save/load system that easily saves Inventory items and Quests",
             "Quest & dialogue system with branching conversations",
@@ -97,8 +96,10 @@ function openModal(index) {
         : '';
 
     const videosHTML = p.videos && p.videos.length
-        ? `<div class="ModalVideos">${p.videos.map(url =>
-            `<div class="ModalVideoWrap"><iframe src="${url}" frameborder="0" allowfullscreen></iframe></div>`
+        ? `<div class="ModalVideos">${p.videos.map(src =>
+            `<video class="ModalVideo" src="${src}" controls muted playsinline>
+                Your browser doesn't support HTML5 video.
+            </video>`
           ).join('')}</div>`
         : '';
 
@@ -124,6 +125,7 @@ function openModal(index) {
 }
 
 function closeModal() {
+    modalBody.querySelectorAll('video').forEach(v => v.pause());
     overlay.classList.remove('open');
     document.body.style.overflow = '';
 }
