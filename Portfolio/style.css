@@ -502,3 +502,185 @@ a {
     .NavLinks { display: none; }
     .ContactLinks { flex-direction: column; align-items: center; }
 }
+
+.BtnViewProject {
+    margin-top: 16px;
+    padding: 10px 20px;
+    background: transparent;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border: 1px solid var(--accent);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    width: 100%;
+}
+
+.BtnViewProject:hover {
+    background: var(--accent);
+    color: #000;
+}
+
+.ModalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(6px);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.ModalOverlay.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.Modal {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--accent);
+    width: 100%;
+    max-width: 760px;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 48px 44px 44px;
+
+    transform: translateY(20px);
+    transition: transform 0.25s ease;
+}
+
+.ModalOverlay.open .Modal {
+    transform: translateY(0);
+}
+
+.Modal::-webkit-scrollbar { width: 4px; }
+.Modal::-webkit-scrollbar-track { background: transparent; }
+.Modal::-webkit-scrollbar-thumb { background: var(--border); }
+
+.ModalClose {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    font-family: var(--font-mono);
+}
+
+.ModalClose:hover {
+    color: var(--accent);
+}
+
+.ModalTag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 3px 10px;
+    margin-bottom: 14px;
+}
+
+.ModalTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.ModalTech {
+    margin-bottom: 20px;
+}
+
+.ModalDesc {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.ModalFeatures {
+    list-style: none;
+    margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ModalFeatures li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--text-muted);
+    font-size: 0.98rem;
+}
+
+.ModalFeatures li::before {
+    content: '▸';
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.ModalMedia {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.ModalImg {
+    width: 100%;
+    border: 1px solid var(--border);
+    display: block;
+}
+
+.ModalVideos {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.ModalVideoWrap {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.ModalVideoWrap iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--border);
+}
+
+.ModalLink {
+    display: inline-block;
+    margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+    .Modal {
+        padding: 36px 24px 32px;
+    }
+    .ModalTitle {
+        font-size: 1.5rem;
+    }
+}
