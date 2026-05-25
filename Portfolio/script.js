@@ -52,7 +52,13 @@ const PROJECTS = [
             "Modular architecture, that means each system is its own module",
             "Very scalable",
         ],
-        images: [],
+        images: [
+            "Images/OutsideImage.png",
+            "Images/OutsideImage2.png",
+            "PortalHub.png",
+            "ProjectExplorer.png",
+            "ProjectExplorer2.png"
+        ],
         videos: [],
         link: null,
     },
