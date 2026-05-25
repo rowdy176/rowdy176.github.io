@@ -36,7 +36,6 @@
             </div>
         </div>
         <div class="HeroCode">
-            
 <pre><code><span class="c-keyword">export type</span> Developer = {
     name: <span class="c-keyword">string</span>,
     nickname: <span class="c-keyword">string</span>?,
@@ -87,7 +86,7 @@
                     </div>
                     <div class="StatCard">
                         <span class="StatNum">1</span>
-                        <span class="StatLabel">Projects I've helped on</span>
+                        <span class="StatLabel">Projects I've helped on / Commissions</span>
                     </div>
                     <div class="StatCard">
                         <span class="StatNum">~2</span>
@@ -107,36 +106,7 @@
         <div class="SectionInner">
             <h2 class="SectionTitle">My <span class="Accent">Projects</span></h2>
             <p class="SectionSub">A few things I've built.</p>
-            <div class="ProjectsGrid">
-
-                <div class="ProjectCard">
-                    <div class="ProjectTag">Input</div>
-                    <h3 class="ProjectName">Input Controller</h3>
-                    <p class="ProjectDesc">An extremely simple to use wrapper for UserInputService that features filtered Input signals, binding actions, unbinding actions, combos and so much more.</p>
-                    <div class="ProjectTech">
-                        <span>Luau</span><span>UserInputService</span><span>Wrapper</span>
-                    </div>
-                </div>
-
-                <div class="ProjectCard">
-                    <div class="ProjectTag">UI</div>
-                    <h3 class="ProjectName">Admin Panel</h3>
-                    <p class="ProjectDesc">A custom in-game admin dashboard for whitelisted users using Iris ImGui.</p>
-                    <div class="ProjectTech">
-                        <span>Luau</span>
-                    </div>
-                </div>
-
-                <div class="ProjectCard">
-                    <div class="ProjectTag">Game</div>
-                    <h3 class="ProjectName">Active Incremental Game</h3>
-                    <p class="ProjectDesc">I have an incremental game that I am actively working on. It features systems like saving, quests & dialogues, Player data handling and so much more!</p>
-                    <div class="ProjectTech">
-                        <span>Luau</span><span>Studio</span><span>Incremental</span><span>Active Project</span>
-                    </div>
-                </div>
-
-            </div>
+            <div class="ProjectsGrid" id="ProjectsGrid"></div>
         </div>
     </section>
 
@@ -213,8 +183,16 @@
 
     <!-- FOOTER SECTION -->
     <footer class="Footer">
-        <p>Built by <span class="Accent">NullSynced</span>  *  Roblox Scripter & Systems Developer</p>
+        <p>Built by <span class="Accent">NullSynced</span>  *  Roblox Scripter</p>
     </footer>
+
+    <!-- PROJECT MODAL -->
+    <div class="ModalOverlay" id="ModalOverlay">
+        <div class="Modal" id="Modal">
+            <button class="ModalClose" id="ModalClose">✕</button>
+            <div class="ModalBody" id="ModalBody"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
