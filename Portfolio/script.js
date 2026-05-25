@@ -55,9 +55,9 @@ const PROJECTS = [
         images: [
             "Images/OutsideImage.png",
             "Images/OutsideImage2.png",
-            "PortalHub.png",
-            "ProjectExplorer.png",
-            "ProjectExplorer2.png"
+            "Images/PortalHub.png",
+            "Images/ProjectExplorer.png",
+            "Images/ProjectExplorer2.png"
         ],
         videos: [],
         link: null,
