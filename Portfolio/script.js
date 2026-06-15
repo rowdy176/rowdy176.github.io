@@ -8,7 +8,7 @@ const PROJECTS = [
         tag:       "Gameplay Mechanic",
         title:     "Spectating System",
         shortDesc: "A plug-and-play spectating system that lets you spectate every player in the game using a simple UI.",
-        tech:      ["Luau", "Spectating", "System", "UI State Management", "Plug-and-play", "Camera"],
+        tech:      ["Luau", "Spectating", "Gameplay Mechanic", "UI State Management", "Plug-and-play", "Camera"],
         longDesc:  "A spectating system built for Roblox that allows players to cycle through active players using a simple UI. It handles edge cases such as players leaving, respawning, and empty lobbies, while keeping the camera correctly bound to Humanoids at all times. The system is built around clean state management (Idle/Spectating), proper event cleanup to avoid memoryl eaks, and dynamic player list updates to ensure reliable transitions between targets.",
         features:  [
             "Cycle through all active players using next/previous controls",
@@ -47,7 +47,7 @@ const PROJECTS = [
         tag:       "UI",
         title:     "Admin Panel",
         shortDesc: "A custom in-game admin dashboard for whitelisted users using Iris ImGui.",
-        tech:      ["Luau"],
+        tech:      ["Luau", "UI"],
         longDesc:  "An in-game admin panel using Iris ImGui. Only whitelisted user IDs can open it. However, this project is rather old, discontinued and won't be shown publicly. I don't even know why I added this here in the first place.",
         features: [
             "Whitelist system, only specific user IDs can get it and use it",
@@ -60,9 +60,9 @@ const PROJECTS = [
     },
     {
         tag:       "Game",
-        title:     "Active Incremental Game",
+        title:     "Active Incremental Simulator",
         shortDesc: "I have an incremental game that I am actively working on. It features systems like saving, quests & dialogues, Player data handling and so much more!",
-        tech:      ["Luau", "Studio", "Incremental", "Active Project"],
+        tech:      ["Luau", "Game", "Studio", "Incremental", "Active Project"],
         longDesc:  "An incremental game built entirely from scratch in Roblox Studio. This is my main long-term project for now. \n\n In the images linked under, please do not judge my building skills, I know I am horrible at building :)",
         features: [
             "Full save/load system that easily saves Inventory items and Quests",
