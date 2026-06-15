@@ -7,8 +7,8 @@ const PROJECTS = [
     {
         tag:       "Gameplay Mechanic",
         title:     "Spectating System",
-        shortDesc: "A plug-and-play spectating system that lets you spectate every player in the game using a simple UI.",
-        tech:      ["Luau", "Spectating", "Gameplay Mechanic", "UI State Management", "Plug-and-play", "Camera"],
+        shortDesc: "A robust spectating system that lets you spectate every player in the game using a simple UI.",
+        tech:      ["Luau", "Spectating", "Gameplay Mechanic", "UI State Management", "Camera"],
         longDesc:  "A spectating system built for Roblox that allows players to cycle through active players using a simple UI. It handles edge cases such as players leaving, respawning, and empty lobbies, while keeping the camera correctly bound to Humanoids at all times. The system is built around clean state management (Idle/Spectating), proper event cleanup to avoid memory leaks, and dynamic player list updates to ensure reliable transitions between targets.",
         features:  [
             "Cycle through all active players using next/previous controls",
