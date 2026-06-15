@@ -5,6 +5,25 @@
 // links can be anything tbh
 const PROJECTS = [
     {
+        tag:       "Gameplay Mechanic",
+        title:     "Spectating System",
+        shortDesc: "A plug-and-play spectating system that let's you spectate every player in the game using a simple UI.",
+        tech:      ["Luau", "Spectating", "System", "UI State Management", "Plug-and-play", "Camera"],
+        longDesc:  "A spectating system built for Roblox that allows players to cycle through active players using a simple UI. It handles edge cases such as players leaving, respawning, and empty lobbies, while keeping the camera correctly bound to Humanoids at all times. The system is built around clean state management (Idle/Spectating), proper event cleanup to avoid memoryl eaks, and dynamic player list updates to ensure reliable transitions between targets.",
+        features:  [
+            "Cycle through all active players using next/previous controls",
+            "Automatic camera binding to target Humanoid",
+            "Dynamic player list updates when players join or leave",
+            "Handles edge cases like empty lobbies and target player disconnections or respawns",
+            "State-based system (Idle / Spectating) with clean UI synchronization",
+            "Automatic fallback to a valid player if current target becomes invalid",
+            "Seamless exit back to the local player's character and camera control"
+        ],
+        images: [],
+        videos: ["Videos/SpectateDEMO.mp4"],
+        link: null,
+    },
+    {
         tag:       "Input",
         title:     "Input Controller",
         shortDesc: "An extremely simple to use wrapper for UserInputService that features filtered Input signals, binding actions, unbinding actions, combos and so much more.",
