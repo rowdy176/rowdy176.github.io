@@ -67,7 +67,28 @@ const PROJECTS = [
             label: "View on GitHub",
             url: "https://github.com/rowdy176/Libraries/tree/main/Major%20Libraries/Scheduler"
         },
-        featured: true
+    },
+    {
+        tag: "Combat System",
+        title: "Data Driven Combat Prototype",
+        shortDesc: "A scalable, data driven combat system built around reusable weapon, armor, and gear constructors.",
+        tech: ["Object-Oriented-Programming", "Data Driven Design"],
+        longDesc: "A modular combat prototype designed around seperating item data from runtime behaviour. Weapon definitions are stored independently from weapon types and shared metadata, while constructors turn those definitions into reusable runtime objects. The same weapon system can be used by both players and NPCs without any structural change in code, with centralized networking and automatic resource cleanup through the Steward library.",
+        features: [
+            "Hierarchical, data driven weapon definitions",
+            "Separate item data, type behaviour, and metadata",
+            "Reusable Weapon, ArmorPiece, and Gear constructors",
+            "Player and NPC compatible weapon system",
+            "Server authoritative combat logic",
+            "Configurable hitboxes, ranges, speeds, damage types, blocking, and parrying",
+            "Animation driven hit detection",
+            "Automatic connection and resource cleanup through Steward (self-made library).",
+            "Unique runtime weapon instances"
+        ],
+        images: [],
+        videos: ["Videos/DataDrivenCombatSystemPrototype.mp4"],
+        link: null,
+        featured: true,
     }
 ];
 
