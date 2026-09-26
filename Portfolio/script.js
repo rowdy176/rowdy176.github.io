@@ -11,7 +11,7 @@ const PROJECTS = [
         tag:       "Gameplay Mechanic",
         title:     "Spectating System",
         shortDesc: "A robust spectating system that lets you spectate every player in the game using a simple UI.",
-        tech:      ["Luau", "Spectating", "Gameplay Mechanic", "UI State Management", "Camera"],
+        tech:      ["Spectating", "Gameplay Mechanic", "UI State Management", "Camera"],
         longDesc:  "A spectating system built for Roblox that allows players to cycle through active players using a simple UI. It handles edge cases such as players leaving, respawning, and empty lobbies, while keeping the camera correctly bound to Humanoids at all times. The system is built around clean state management (Idle/Spectating), proper event cleanup to avoid memory leaks, and dynamic player list updates to ensure reliable transitions between targets.",
         features:  [
             "Cycle through all active players using next/previous controls",
@@ -30,7 +30,7 @@ const PROJECTS = [
         tag:       "Input",
         title:     "Input Controller",
         shortDesc: "An extremely simple to use wrapper for UserInputService that features filtered Input signals, binding actions, unbinding actions, combos and so much more.",
-        tech:      ["Luau", "UserInputService", "Wrapper"],
+        tech:      ["UserInputService", "Wrapper"],
         longDesc:  "A lightweight but powerful wrapper around Roblox's UserInputService. The goal was to make predictable APIs for UIS that are easy to understand and simplify things that have been stressing developers for a while.",
         features: [
             "Filtered input signals, automatically are checked for no gameProcessed",
@@ -46,6 +46,29 @@ const PROJECTS = [
             url: "https://github.com/rowdy176/InputController"
         },
     },
+    {
+        tag:       "Library",
+        title:     "Scheduler",
+        shortDesc: "A configurable, tick based task scheduler with centralized task management and delayed task execution.",
+        tech:      ["Task Management", "Tick Based"],
+        longDesc:  "A tick based task scheduler designed around centralized task management. Each Scheduler instance has its own configurable tick rate and supports immediate tasks, delayed tasks, and task cancellation without creating a seperate delayed thread for every task. Scheduler uses the tombstone marking pattern to remove tasks via ID instead of having an expensive O(2n) search for the task by searching linearly through _tasks and _queue.",
+        features:  [
+            "Configurable tick rate",
+            "Immediate tasks with Push()",
+            "Delayed tasks wtih Delay()",
+            "Task cancellation with Remove()",
+            "Centralized task queues",
+            "Deferred task removal using a tombstone marking pattern",
+            "Independent scheduler instances (OOP)"
+        ],
+        images: [],
+        videos: [],
+        link: {
+            label: "View on GitHub",
+            url: "https://github.com/rowdy176/Libraries/tree/main/Major%20Libraries/Scheduler"
+        },
+        featured: true
+    }
 ];
 
 const grid = document.getElementById('ProjectsGrid');
